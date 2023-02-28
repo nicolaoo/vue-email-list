@@ -14,12 +14,11 @@
 
     <div id="app" >
 
-        <h1>
-            {{ email }} - {{manyEmails}}
-        </h1>
-        <button @click="fetchName">
-            tante mail
-        </button>
+        <ul>
+            <li v-for="email in manyEmails">
+                {{ email }}
+            </li>
+        </ul>
         
 
     </div>

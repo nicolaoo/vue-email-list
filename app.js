@@ -11,8 +11,9 @@ const { createApp } = Vue
         fetchEmail() {
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then((res) => {
-                console.group(res.data.response)
-                this.manyEmails.push(res.data.response)
+                console.log(res.data.response)
+                const { response: email } = res.data
+                this.manyEmails.push(email)
             })
         },
 
